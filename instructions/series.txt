@@ -1,0 +1,36 @@
+This is the formt for the LINEAR sequences:
+
+* * *
+Which of the following options completes the sequence?
+
+m=1, n=1, m=2, n=2, m=3, n=3, ___
+
+a.
+b.
+c.
+d.
+* * *
+
+
+10%: Simple Linear
+PATTERN-1: x*m+c, 2<x<6, c=random(0→20), convert to letters (eg ..., X, Y, Z, AA, BB, CC, ...)
+ANSWERS-1: m=7, (a⁶+x+1), (a⁶+x+2), (a⁶+2*x+1)
+PATTERN-2: m/x*4, 1<x<20, reduce fraction to lowest terms
+ANSWERS-2: m=7, m=8, m=9, "numerator(a5)+numerator(a6)"/"denominator(a5)+denominator(a6)"
+
+40%: Alternating Linear
+PATTERN: xm+c, yn+d, x=±y±random(0→9), 1<y<20, c=d±random(0→99), 5<d<3000, c>0
+ANSWERS: m=4, (a⁶-a⁵+a⁶), (a⁵+y), (a⁶+y)
+
+30%: Quadratic
+PATTERN: (x*m²±y*m)/2+c, 0<x<10, 5<y<25, 99<c<5000
+ANSWERS: m=7, (a²-a¹+a⁶), (a⁵-a⁴+a⁶), (a⁶-a⁵+a⁶)
+
+20%: Recursive
+PATTERN-1: a@m=a@(m-1)/a@(m-2), a¹=random(5→15), a²=a¹+random(2→12), to three decimals
+ANSWERS-1: (a⁷=a⁶/a⁵), (a²+a⁶), (a⁴/a⁶), ∑a(m=1→6)
+PATTERN-2: a@m=a@(m-3)±a@(m-2)±a@(m-1), [a¹=random(1→500),a²=random(1→500),a³=random(1→500)]
+ANSWERS-2: (a⁷=a⁶±a⁵±a⁴), (a⁶-a⁵+a⁶), (a²-a¹+a⁶), random(1→1000)
+
+
+

@@ -1,0 +1,9 @@
+1. Direction of Flow: Drag the two qualifiers to either side of the arrow.
+   (cooler ----> hotter)
+
+2. Objects to Compare: Drag each of the five nouns to an empty point on the pentagon.
+
+3. Set Comparisons: Draw an arrow between each comparison matching the direction of flow in step 1.
+   ("AAAA is hotter than BBBB" = "AAAA <---- BBBB")
+
+4. Validate Options: For each answer option, attempt to follow the arrows from one noun to the other. Only one will work.

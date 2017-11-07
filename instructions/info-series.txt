@@ -1,0 +1,33 @@
+Clue: Quick glance
+If decimals, skip to Recursive clue (Are all the numbers to 2 or 3 decimals? Y/N)
+If letters, convert to numbers (alphabet placement: A=1, B=2, ..., Z=26, AA=27, etc)
+
+Clue: Linear
+X1 , X2 , X3 , X4 , X5 , X6 , ___
+calculate the difference: (3rd and 1st numbers are highlighted) 3rd minus 1st=___(D1)
+calculate the difference: (5th and 3rd numbers are highlighted) 5th minus 3rd=___(D2)
+If D1=D2, then answer is D1+X5 (not X6! many sequences are two that alternate, ie. every other one)
+If different, go to next clue
+(__ skip to next clue)
+
+Clue: Quadratic
+X1 , X2 , X3 , X4 , X5 , X6 , ___
+diff: X2-X1=___(D1)
+diff: X3-X2=___(D2)
+diff: X4-X3=___(D3)
+Is D2-D1 same as D3-D2? ___(E)
+If different, go to next clue
+diff: X5-X4=___(D4)
+diff: X6-X5=___(D5)
+If pattern continues, then answer is E+D5+X6
+If different, go to next clue
+(__ skip to next clue)
+
+Clue: Recursive
+X1 , X2 , X3 , X4 , X5 , X6 , ___
+If decimals:
+ calculate X2/X1=___ Does it equal X3?
+ If so, then answer is X6/X5=___
+If integers:
+ calculate (this part I am still working on)
+

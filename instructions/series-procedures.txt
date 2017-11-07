@@ -1,0 +1,104 @@
+
+* * * * * * * * * *
+NOTES
+* * * * * * * * * *
+Linear and quadratic: Use text boxes
+Recursive: Consider drag & drop for numbers in the series and radio buttons for math functions
+
+
+
+* * * * * * * * * *
+LINEAR
+* * * * * * * * * *
+STEP 1: If series are letters, convert to numbers based on alphabetical position (ie. A=1, B=2, ..., Z=26, AA=27, BB=28, etc.)
+
+STEP 2: If series are fractions, expand to largest common denominator (eg. 1/12, 1/6, 1/4, 1/3, ... becomes 1/12, 2/12, 3/12, 4/12, ...)
+
+STEP 3: Calculate difference between successive numbers (ie. latter minus former, eg. X₂-X₁)
+X₁    X₂    X₃    X₄    X₅    X₆    [__A__]
+  \  /  \  /  \  /  \  /  \  /
+  _\/_  _\/_  _\/_  _\/_  _\/_
+ | D  || D  || D  || D  || D  |       <--- 1st difference (D)
+ |____||____||____||____||____|
+
+STEP 4: If all 1st differences are the same, answer equals the 1st difference (D) plus the last number in series (X₆)
+X₁, X₂, X₃, X₄, X₅, X₆, [A = D + X₆]
+
+
+
+* * * * * * * * * *
+ALTERNATING LINEAR
+* * * * * * * * * *
+STEP 1: Calculate difference between alternating numbers (eg. third minus first)
+X₁  X₂  X₃  X₄  X₅  X₆  [__A__]
+  \    /  \    /
+   \  /    \  /
+   _\/_    _\/_
+  | D₁ |  | D₁ |        <--- 1st difference (D₁)
+  |____|  |____|
+
+STEP 2: (optional) Calculate difference between other alternating numbers (even, eg. fourth minus second)
+X₁  X₂  X₃  X₄  X₅  X₆  [__A__]
+      \    /  \    /
+       \  /    \  /
+       _\/_    _\/_
+      | D₂ |  | D₂ |    <--- 1st difference (D₂)
+      |____|  |____|
+
+STEP 3: If all 1st differences are the same, answer equals 1st difference between third and first numbers (X₃-X₁) plus the second-last number in series (X₅)
+X₁, X₂, X₃, X₄, X₅, X₆, [A = D₁ + X₆]
+
+
+
+* * * * * * * * * *
+QUADRATIC
+* * * * * * * * * *
+STEP 1: Calculate the difference between successive numbers (ie. latter minus former, eg. X₂-X₁)
+ X₁     X₂      X₃      X₄      X₅      X₆    [__A__]
+   \  /    \  /    \  /    \  /    \  /
+   _\/_    _\/_    _\/_    _\/_    _\/_
+  | D₁ |  | D₂ |  | D₃ |  | D₄ |  | D₅ |       <--- 1st difference (D₁ to D₅)
+  |____|  |____|  |____|  |____|  |____|
+
+STEP 2: Calculate the difference between the first differences from step 1
+ X₁     X₂      X₃      X₄      X₅      X₆    [__A__]
+   \  /    \  /    \  /    \  /    \  /
+   _\/_    _\/_    _\/_    _\/_    _\/_
+  | D₁ |  | D₂ |  | D₃ |  | D₄ |  | D₅ |       <--- 1st difference
+  |____|  |____|  |____|  |____|  |____|
+       \  /    \  /    \  /    \  /
+       _\/_    _\/_    _\/_    _\/_
+      | E  |  | E  |  | E  |  | E  |          <--- 2nd difference (E)
+      |____|  |____|  |____|  |____|
+
+STEP 3: If all 2nd differences are the same, answer equals the 2nd difference (E) plus 1st difference between last two numbers (D₅) plus the last number in series (X₆)
+X₁, X₂, X₃, X₄, X₅, X₆, [A = E + D₅ + X₆]
+
+
+
+* * * * * * * * * *
+RECURSIVE
+* * * * * * * * * *
+STEP 1: If series consists of decimals to three places (.000), divide the first two numbers to get the third. Confirm by repeating the same procedure with other numbers in the series.
+X₁, X₂, X₃, X₄, X₅, X₆, ___
+ 1a. X₂ / X₁ = X₃? If so, A = X₆ / X₅
+ 1b. X₁ / X₂ = X₃? If so, A = X₅ / X₆
+
+STEP 2: If series consists of whole numbers, add or subtract the first two numbers to get the third. Confirm by repeating the same procedure with other numbers in the series.
+X₁, X₂, X₃, X₄, X₅, X₆, ___
+ 2a. X₁ + X₂ = X₃? If so, A = X₅ + X₆               <--- addition only
+ 2b. X₁ - X₂ = X₃? If so, A = X₅ - X₆               <--- former to latter
+ 2c. X₂ - X₁ = X₃? If so, A = X₆ - X₅               <--- latter to former
+
+STEP 3: Add or subtract the first three numbers to get the fourth.
+X₁, X₂, X₃, X₄, X₅, X₆, ___
+ 3a. X₁ + X₂ + X₃ = X₄? If so, A = X₄ + X₅ + X₆     <--- addition only
+ 3b. X₁ - X₂ - X₃ = X₄? If so, A = X₄ - X₅ - X₆  ⎫
+ 3c. X₁ + X₂ - X₃ = X₄? If so, A = X₄ + X₅ - X₆  ⎬  <--- former to latter
+ 3d. X₁ - X₂ + X₃ = X₄? If so, A = X₄ - X₅ + X₆  ⎭
+ 3e. X₃ - X₂ - X₁ = X₄? If so, A = X₆ - X₅ - X₄  ⎫
+ 3f. X₃ - X₂ + X₁ = X₄? If so, A = X₆ - X₅ + X₄  ⎬  <--- latter to former
+ 3g. X₃ + X₂ - X₁ = X₄? If so, A = X₆ + X₅ - X₄  ⎭
+
+STEP 4: Consider including multiplication in any of the preceding steps, especially if the differences between sucessive numbers are rather large.
+
